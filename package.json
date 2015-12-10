@@ -1,0 +1,9 @@
+{
+  "name": "react-babel-webpack-boilerplate",
+  "version": "0.0.1",
+  "description": "A boilerplate for react / babel / webpack development workflow",
+  "main": "index.js",
+  "private": true,
+  "author": "Tommy Troy Lin",
+  "license": "MIT"
+}
