@@ -4,6 +4,24 @@
   "description": "A boilerplate for react / babel / webpack development workflow",
   "main": "index.js",
   "private": true,
+  "scripts": {
+    "build": "webpack -d --progress --colors --display-error-details",
+    "dev": "webpack-dev-server --devtool eval --progress --colors --inline --hot --content-base build"
+  },
   "author": "Tommy Troy Lin",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3"
+  },
+  "devDependencies": {
+    "babel-core": "^6.3.17",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "copy-webpack-plugin": "^0.3.3",
+    "extract-text-webpack-plugin": "^0.9.1",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
+  }
 }
