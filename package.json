@@ -6,6 +6,7 @@
   "private": true,
   "scripts": {
     "build": "webpack -d --progress --colors --display-error-details",
+    "dist": "rm -rf dist/ && webpack -p --config webpack.dist.config.js --progress --colors --display-error-details",
     "dev": "webpack-dev-server --devtool eval --progress --colors --inline --hot --content-base build"
   },
   "author": "Tommy Troy Lin",
