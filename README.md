@@ -1,9 +1,12 @@
 ## react-babel-webpack-boilerplate
 A boilerplate [React](http://facebook.github.io/react/) app workflow.
 
-Using
-* [Webpack](http://webpack.github.io/) as module bundler
-* [Babel](https://babeljs.io/) to compile `ES6` and `JSX` syntax
+### Dependencies
+* [Webpack](http://webpack.github.io/) module bundler
+* [Babel](https://babeljs.io/) compiling `ES6` and `JSX` syntax
+* [Karma](http://karma-runner.github.io/) test runner
+* [Mocha](http://mochajs.org/) test framework
+* [Chai](http://chaijs.com/) assertion library
 
-## License
+### License
 MIT
