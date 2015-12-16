@@ -1,3 +1,9 @@
+/**
+ * Root component
+ *
+ * Created by Tommy on 12/05/15.
+ */
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Component from './component/Component';
