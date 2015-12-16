@@ -1,6 +1,14 @@
 {
+  "env": {
+    "browser": true,
+    "node": true,
+    "mocha": true
+  },
   "extends": "airbnb",
   "plugins": [
     "react"
-  ]
+  ],
+  "rules": {
+    "func-names": 0
+  }
 }

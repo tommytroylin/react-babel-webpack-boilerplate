@@ -5,7 +5,7 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "lint": "(eslint 'src/app/**/*.@(js|jsx)'; eslint 'test/**/*.@(js|jsx)'; exit 0)",
+    "lint": "(eslint 'src/app/**/*.@(js|jsx)'; eslint --rule 'no-unused-expressions: 0' 'test/**/*.@(js|jsx)'; exit 0)",
     "test": "(karma start test/karma.conf.js; exit 0)",
     "build": "webpack -d --progress --colors --display-error-details",
     "dist": "rm -rf dist/ && webpack -p --config webpack.dist.config.js --progress --colors --display-error-details",
