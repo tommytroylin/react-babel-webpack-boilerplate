@@ -5,6 +5,7 @@
   "main": "index.js",
   "private": true,
   "scripts": {
+    "lint": "(eslint 'src/app/**/*.@(js|jsx)'; eslint 'test/**/*.@(js|jsx)'; exit 0)",
     "test": "(karma start test/karma.conf.js; exit 0)",
     "build": "webpack -d --progress --colors --display-error-details",
     "dist": "rm -rf dist/ && webpack -p --config webpack.dist.config.js --progress --colors --display-error-details",
@@ -23,6 +24,9 @@
     "babel-preset-react": "^6.3.13",
     "chai": "^3.4.1",
     "copy-webpack-plugin": "^0.3.3",
+    "eslint": "^1.10.3",
+    "eslint-config-airbnb": "^2.1.1",
+    "eslint-plugin-react": "^3.11.3",
     "extract-text-webpack-plugin": "^0.9.1",
     "karma": "^0.13.15",
     "karma-chrome-launcher": "^0.2.2",

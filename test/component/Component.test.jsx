@@ -14,5 +14,4 @@ describe('Tests for Component component', function () {
     const component = ReactTestUtils.renderIntoDocument(<Component />);
     expect(component).to.exist;
   });
-
 });
