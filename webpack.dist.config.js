@@ -21,22 +21,30 @@ module.exports = {
       { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader') },
       {
         test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
-        loader: 'url?limit=10000&mimetype=application/font-woff',
-        query: { name: 'assets/other/[hash].[ext]' }
+        loader: 'url',
+        query: { limit: 10000, mimetype: 'application/font-woff', name: 'assets/other/[hash].[ext]' },
       },
       {
         test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
-        loader: 'url?limit=10000&mimetype=application/octet-stream',
-        query: { name: 'assets/other/[hash].[ext]' }
+        loader: 'url',
+        query: { limit: 10000, mimetype: 'application/octet-stream', name: 'assets/other/[hash].[ext]' },
       },
       { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file', query: { name: 'assets/other/[hash].[ext]' } },
       {
         test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-        loader: 'url?limit=10000&mimetype=image/svg+xml',
-        query: { name: 'assets/other/[hash].[ext]' }
+        loader: 'url',
+        query: { limit: 10000, mimetype: 'image/svg+xml', name: 'assets/other/[hash].[ext]' },
       },
-      { test: /\.png$/, loader: 'url?limit=10000&mimetype=image/png', query: { name: 'assets/img/[hash].[ext]' } },
-      { test: /\.jpg$/, loader: 'url?limit=10000&mimetype=image/jpeg', query: { name: 'assets/img/[hash].[ext]' } },
+      {
+        test: /\.png$/,
+        loader: 'url',
+        query: { limit: 10000, mimetype: 'image/png', name: 'assets/img/[hash].[ext]' },
+      },
+      {
+        test: /\.jpg$/,
+        loader: 'url',
+        query: { limit: 10000, mimetype: 'image/jpeg', name: 'assets/img/[hash].[ext]' },
+      },
     ],
   },
   resolve: {
