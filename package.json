@@ -14,8 +14,8 @@
   "author": "Tommy Troy Lin",
   "license": "MIT",
   "dependencies": {
-    "react": "^0.14.7",
-    "react-dom": "^0.14.7"
+    "react": "^15.0.1",
+    "react-dom": "^15.0.1"
   },
   "devDependencies": {
     "babel-core": "^6.4.5",
@@ -26,17 +26,18 @@
     "copy-webpack-plugin": "^1.1.1",
     "css-loader": "^0.23.1",
     "eslint": "^2.2.0",
-    "eslint-config-airbnb": "^6.0.2",
+    "eslint-config-airbnb": "^7.0.0",
+    "eslint-plugin-jsx-a11y": "^0.6.2",
     "eslint-plugin-react": "^4.1.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
     "karma": "^0.13.19",
     "karma-chrome-launcher": "^0.2.2",
     "karma-mocha": "^0.2.1",
-    "karma-mocha-reporter": "^1.1.5",
+    "karma-mocha-reporter": "^2.0.0",
     "karma-webpack": "^1.7.0",
     "mocha": "^2.4.5",
-    "react-addons-test-utils": "^0.14.7",
+    "react-addons-test-utils": "^15.0.1",
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.7",
     "webpack": "^1.12.12",
