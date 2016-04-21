@@ -17,19 +17,36 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /\.jsx?$/, exclude: /node_modules/, loader: 'babel-loader', query: { presets: ['es2015', 'react'] } },
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        query: { presets: ['es2015', 'react'] }
+      },
       { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader') },
       {
         test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
         loader: 'url',
-        query: { limit: 10000, mimetype: 'application/font-woff', name: 'assets/other/[hash].[ext]' },
+        query: {
+          limit: 10000,
+          mimetype: 'application/font-woff',
+          name: 'assets/other/[hash].[ext]'
+        },
       },
       {
         test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
         loader: 'url',
-        query: { limit: 10000, mimetype: 'application/octet-stream', name: 'assets/other/[hash].[ext]' },
+        query: {
+          limit: 10000,
+          mimetype: 'application/octet-stream',
+          name: 'assets/other/[hash].[ext]'
+        },
       },
-      { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file', query: { name: 'assets/other/[hash].[ext]' } },
+      {
+        test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'file',
+        query: { name: 'assets/other/[hash].[ext]' }
+      },
       {
         test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
         loader: 'url',
@@ -54,4 +71,8 @@ module.exports = {
     new ExtractTextPlugin('assets/css/[name].css'),
     new CopyWebpackPlugin([{ from: 'src/static/index.html' }]),
   ],
+  devServer: {
+    contentBase: './build',
+    outputPath: './build',
+  },
 };
