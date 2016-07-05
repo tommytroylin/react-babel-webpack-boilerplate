@@ -25,6 +25,7 @@ export default class Component extends React.Component {
     return (
       <div>
         <h3>Components 1</h3>
+        <p>{this.state.clicked ? 'Clicked' : 'Not Clicked'}</p>
         <button onClick={this.handleClick}>Click Me</button>
       </div>
     );
