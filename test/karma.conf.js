@@ -1,8 +1,8 @@
 // Karma configuration
 // Generated on Sat Dec 12 2015 09:01:03 GMT+0800 (CST)
 
-module.exports = function (config) {
-  config.set({
+module.exports = (config) => {
+  const configObject = {
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '..',
@@ -71,7 +71,8 @@ module.exports = function (config) {
     colors: true,
 
     // level of logging
-    // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
+    // possible values: config.LOG_DISABLE || config.LOG_ERROR ||
+    // config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
     logLevel: config.LOG_INFO,
 
     // enable / disable watching file and executing tests whenever any file changes

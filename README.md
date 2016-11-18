@@ -10,3 +10,9 @@ A boilerplate [React](http://facebook.github.io/react/) app workflow.
 
 ### License
 MIT
+
+
+### TODOs
+* [x] latest preset
+* [ ] use html-webpack-plugin
+* [ ] config for dist

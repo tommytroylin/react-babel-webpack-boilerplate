@@ -21,7 +21,7 @@ module.exports = {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
-        query: { presets: ['es2015', 'react'] }
+        query: { presets: ['latest', 'react'] }
       },
       { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader') },
       {
