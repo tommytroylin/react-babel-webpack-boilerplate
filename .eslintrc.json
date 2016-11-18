@@ -1,4 +1,5 @@
 {
+  "praser": "babel-eslint",
   "env": {
     "browser": true,
     "node": true,
@@ -9,6 +10,18 @@
     "react"
   ],
   "rules": {
-    "func-names": 0
+    "func-names": "off",
+    "react/prefer-stateless-function" : "warn",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "**/*.test.js",
+          "**/*.test.jsx",
+          "**/*.spec.js",
+          "**/*.spec.jsx"
+        ]
+      }
+    ]
   }
 }
