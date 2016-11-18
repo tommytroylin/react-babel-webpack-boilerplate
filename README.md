@@ -1,4 +1,6 @@
 ## react-babel-webpack-boilerplate
+![](https://travis-ci.org/tommytroylin/react-babel-webpack-boilerplate.svg?branch=master)
+
 A boilerplate [React](http://facebook.github.io/react/) app workflow.
 
 ### Dependencies
