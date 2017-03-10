@@ -1,9 +1,8 @@
 {
   "name": "react-babel-webpack-boilerplate",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "A boilerplate for react / babel / webpack development workflow",
   "main": "index.js",
-  "private": true,
   "scripts": {
     "test": "karma start test/karma.conf.js",
     "build": "webpack",
