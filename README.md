@@ -15,6 +15,7 @@ MIT
 
 
 ### TODOs
-* [x] latest preset
-* [ ] use html-webpack-plugin
+* [x] env preset
+* [x] use html-webpack-plugin
+* [x] upgrade to webpack 2
 * [ ] config for dist

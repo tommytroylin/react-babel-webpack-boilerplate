@@ -7,19 +7,16 @@
 import React from 'react';
 
 export default class Component extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      clicked: false,
-    };
-    this.handleClick = this.handleClick.bind(this);
-  }
 
-  handleClick() {
+  state = {
+    clicked: false,
+  };
+
+  handleClick = () => {
     this.setState({
       clicked: true,
     });
-  }
+  };
 
   render() {
     return (

@@ -1,22 +1,20 @@
-/**
- * Root component
- *
- * Created by Tommy on 12/05/15.
- */
+import React from 'react'
+import ReactDOM from 'react-dom'
+// import { AppContainer } from 'react-hot-loader'
 
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Component from './component/Component';
+import App from './app';
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <div>
-        <h1>Hello World!</h1>
-        <Component />
-      </div>
-    );
-  }
-}
+ReactDOM.render(<App/>, document.getElementById('app'));
 
-ReactDOM.render(<App />, document.getElementById('app'));
+// const render = () => ReactDOM.render(
+//   <AppContainer>
+//     <App />
+//   </AppContainer>,
+//   document.getElementById('app'),
+// );
+//
+// render();
+//
+// if (module.hot) {
+//   module.hot.accept('./app', render);
+// }
