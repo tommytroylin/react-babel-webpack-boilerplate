@@ -1,6 +1,3 @@
-// Karma configuration
-// Generated on Sat Dec 12 2015 09:01:03 GMT+0800 (CST)
-
 module.exports = (config) => {
   const configObject = {
 
@@ -39,16 +36,25 @@ module.exports = (config) => {
       // webpack configuration
       devtool: 'inline-source-map',
       module: {
-        loaders: [
+        rules: [
           {
             test: /\.jsx?$/,
-            exclude: /node_modules/,
             loader: 'babel-loader',
+            exclude: /node_modules/,
+            query: {
+              babelrc: false,
+              presets: [
+                ['env', { targets: { browsers: ['Chrome >= 50', 'Firefox >= 46', 'Safari >= 10', 'Edge >= 14'] }, modules: false }],
+                'stage-2',
+                'react',
+              ],
+              plugins: ['babel-plugin-espower'],
+            },
           },
         ],
       },
       resolve: {
-        extensions: ['', '.js', '.jsx'],
+        extensions: ['.js', '.json', '.jsx'],
       },
     },
 
