@@ -1,12 +1,6 @@
-/**
- * A demo component
- *
- * Created by Tommy on 12/05/15.
- */
+import React, { Component } from 'react';
 
-import React from 'react';
-
-export default class Component extends React.Component {
+export default class Component1 extends Component {
 
   state = {
     clicked: false,

@@ -1,19 +1,13 @@
-/**
- * Root component
- *
- * Created by Tommy on 12/05/15.
- */
+import React, { Component } from 'react';
 
-import React from 'react';
+import Component1 from './component/Component1';
 
-import Component from './component/Component';
-
-export default class App extends React.Component {
+export default class App extends Component {
   render() {
     return (
       <div>
         <h1>Hello World</h1>
-        <Component />
+        <Component1 />
       </div>
     );
   }

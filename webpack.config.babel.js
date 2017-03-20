@@ -1,13 +1,6 @@
-/**
- * Webpack2 default config for development
- *
- * Created by Tommy on 12/4/15.
- * Modified by Tommy on 3/10/17.
- */
-
 import * as path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-import webpack from 'webpack'
+import webpack from 'webpack';
 
 export default () => ({
 
@@ -15,7 +8,7 @@ export default () => ({
     app: [
       // 'react-hot-loader/patch',
       './src/app/index',
-    ]
+    ],
   },
 
   output: {
@@ -32,7 +25,7 @@ export default () => ({
         query: {
           babelrc: false, // Tells webpack not to use the .babelrc file.
           presets: [
-            ['env', { targets: { browsers: ['Chrome >= 50', 'Firefox >= 46', 'Safari >= 10', 'Edge >= 14'] }, modules: false, }],
+            ['env', { targets: { browsers: ['Chrome >= 50', 'Firefox >= 46', 'Safari >= 10', 'Edge >= 14'] }, modules: false }],
             'stage-2',
             'react',
           ],
@@ -42,7 +35,6 @@ export default () => ({
         },
       },
     ],
-
   },
 
   resolve: {
@@ -71,7 +63,7 @@ export default () => ({
     // hotOnly: true,
     https: false,
     noInfo: true,
-    watchContentBase: true
+    watchContentBase: true,
   },
 
   plugins: [
@@ -79,7 +71,7 @@ export default () => ({
     new webpack.NamedModulesPlugin(),
     new HtmlWebpackPlugin({
       template: 'src/index.html',
-    })
+    }),
   ],
 
 });
