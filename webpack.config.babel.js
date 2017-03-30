@@ -1,5 +1,6 @@
 import * as path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import FriendlyErrorsWebpackPlugin from 'friendly-errors-webpack-plugin';
 import webpack from 'webpack';
 
 export default () => ({
@@ -21,8 +22,7 @@ export default () => ({
       {
         test: /\.jsx?$/,
         loader: 'babel-loader',
-        exclude: /node_modules/,
-        query: {
+        options: {
           babelrc: false, // Tells webpack not to use the .babelrc file.
           presets: [
             ['env', { targets: { browsers: ['Chrome >= 50', 'Firefox >= 46', 'Safari >= 10', 'Edge >= 14'] }, modules: false }],
@@ -34,6 +34,28 @@ export default () => ({
           ],
         },
       },
+      {
+        test: /\.tsx?$/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              babelrc: false, // Tells webpack not to use the .babelrc file.
+              presets: [
+                ['env', { targets: { browsers: ['Chrome >= 50', 'Firefox >= 46', 'Safari >= 10', 'Edge >= 14'] }, modules: false }],
+                'stage-2',
+                'react',
+              ],
+              plugins: [
+                // 'react-hot-loader/babel',
+              ],
+            },
+          },
+          {
+            loader: 'ts-loader',
+          },
+        ],
+      },
     ],
   },
 
@@ -41,7 +63,7 @@ export default () => ({
     modules: [
       'node_modules',
     ],
-    extensions: ['.js', '.json', '.jsx', '.css'],
+    extensions: ['.ts', '.tsx', '.js', '.json', '.jsx', '.css'],
   },
 
   devtool: 'eval',
@@ -69,6 +91,7 @@ export default () => ({
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
+    new FriendlyErrorsWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: 'src/index.html',
     }),
