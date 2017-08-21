@@ -19,4 +19,6 @@ MIT
 * [x] use html-webpack-plugin
 * [x] upgrade to webpack 2
 * [x] replace chai with power-assert
+* [ ] clean build output
 * [ ] config for dist
+* [ ] tslint support
